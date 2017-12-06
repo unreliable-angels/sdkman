@@ -18,7 +18,9 @@ Before using commands which SDKMAN provides (e.g. `kotlin`), you have to run at 
 As a workaround, running `sdk help` or something in your `config.fish` will solve this problem:
 
 ```fish
-sdk help > /dev/null
+if type -q sdk
+    sdk help > /dev/null
+end
 ```
 
 ## Thanks
